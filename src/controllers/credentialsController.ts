@@ -33,5 +33,5 @@ export async function deleteCredential(req: Request, res: Response) {
     await credentialService.checkCredentialById(user.id, parseInt(id))
 
     await credentialService.deleteCredentialById(parseInt(id))
-    return res.status(200).send("credential successfully deleted")
+    return res.status(200).send("Credential successfully deleted")
 }

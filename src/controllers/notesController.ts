@@ -35,6 +35,6 @@ export async function deleteNote(req: Request, res: Response) {
     await notesService.checkNoteById(user.id, parseInt(id))
 
     await notesService.deleteNoteById(parseInt(id))
-    
-    return res.status(200).send("credential successfully deleted")
+
+    return res.status(200).send("Note successfully deleted")
 }
