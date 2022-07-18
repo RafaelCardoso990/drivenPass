@@ -4,8 +4,7 @@ import credentialService from "../services/credentialService.js"
 export async function createCredential(req: Request, res: Response){
     const credential = req.body
     
-    const user = res.locals.user
-    console.log(user.id)       
+    const user = res.locals.user    
 
     await credentialService.insertCredentials(credential, user.id)
     res.sendStatus(201)

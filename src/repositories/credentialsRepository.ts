@@ -49,7 +49,7 @@ async function deleteCredentialById(credentialId: number) {
             id: credentialId
         }
     })
-    console.log("deletou")
+    
 }
 
 export default {
