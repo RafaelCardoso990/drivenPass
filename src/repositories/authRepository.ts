@@ -1,5 +1,5 @@
 import { prisma } from "../../config/db.js"
-import {CreateUserData} from "../services/userServices.js"
+import {CreateUserData} from "../services/authService.js"
 
 async function insertUser(user: CreateUserData) {
     await prisma.users.create({
@@ -16,6 +16,7 @@ async function checkEmail(user: CreateUserData) {
     })
 
 }
+
 
 const userRepository = {
     insertUser,
